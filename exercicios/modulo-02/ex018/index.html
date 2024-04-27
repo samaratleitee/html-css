@@ -23,12 +23,29 @@
     <style>
         @import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
         @font-face {
-            font-family: 'Minha Fonte';
-            src: url('littlebird.ttf');
+            font-family: 'Minha Fonte'; /*Eu escolho o nome da font-family*/
+            src: url('littlebird.ttf') format('truetype'); /*para carregar mais de um format basta separar as url('') e os formats('') por virgula, entre os tipos desejados: url('') format(''), url ('') format('') */
         }
+        /*
+        Tipos de formatos de fontes externas:
+        format('')
+        - opentype (otf) - formato mais utilizado
+        - truetype (ttf) - formato mais utilizado
+        - embedded-opentype
+        - truetype-aat (apple advanced typography)
+        - svg
+        */
         body {
             font-size: 15pt;
         }
+        /*
+        Tamanho de fontes:
+        Medidas absolutas: cm, mm, in, px, pt, pc
+        Medidas relativas: em (altura relativa ao m maiusculo da fonte), ex (altura relativa ao x minusculo da fonte), rem, vw, vh, %
+
+        Recomendação oficial da W3C: px e em
+        Geralmente 1em = 16px
+        */
 
         h2 {
             font-weight: normal; /* serve para tirar o negrito dos títulos */
@@ -37,6 +54,19 @@
         h2#padrao {
             font-family: Arial, Helvetica, sans-serif; /* O navegador vai tentar carregar a primeira, se não funcionar, passa pra próxima */
         }
+        /*
+        font-weight: peso da fonte
+        opções: light, normal, bold, bolder
+        opções numéricas: 100, 200, 300, 400, 500, 600, 700, 800, 900
+        vale lembrar que nem todas as fontes possuem essa quantidade de opções de peso.
+        font-style: estilo da fonte
+        opções: normal, italic, obliquo
+        text-decoration: decoração do texto
+        opções: underline (sublinhado)
+
+        shorthand (propriedade em que varios parametros sao passados com um unico comando, precisa seguir a ordem especifica)
+        font = "font-style, font-weight, font-size, font-family"
+        */
 
         h2#google {
             font-family: 'Pacifico', cursive; /* A importação dessa fonte aconteceu na linha 8 */
