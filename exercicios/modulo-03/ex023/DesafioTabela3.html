@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Desafio Tabela</title>
+
+        <style>
+            * {
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            table {
+                border-collapse: collapse;
+                width: 500px;
+                height: 300px;
+            }
+            caption {
+                font-size: 1.3em;
+            }
+            th {
+                text-align: center;
+                font-weight: bold;
+            }
+            td {
+                text-align: left;
+                font-weight: normal;
+                padding-left: 3px;
+            }
+            td, th {
+                border: 1px solid black;
+            }
+            thead > tr > th {
+                height: 25px;
+            }
+        </style>
+    </head>
+    <body>
+        <table>
+            <caption>
+                Filmes favoritos
+            </caption>
+            <thead>
+                <tr>
+                    <th scope="col">Grupo</th>
+                    <th scope="col">Nomes</th>
+                    <th scope="colgroup" colspan="3">Filmes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="rowgroup" rowspan="3">Mulheres</th>
+                    <td>Ana</td>
+                    <td>Amoeba</td>
+                    <td>Amora</td>
+                    <td>Avalanche</td>
+                </tr>
+                <tr>
+                    <td>Beatriz</td>
+                    <td>Bomba</td>
+                    <td>Biscoito</td>
+                    <td>Branca de Neve</td>
+                </tr>
+                <tr>
+                    <td>Catarina</td>
+                    <td>Cookies</td>
+                    <td>Carrinho</td>
+                    <td>Carros</td>
+                </tr>
+                <tr>
+                    <th scope="rowgroup" rowspan="3">Homens</th>
+                    <td>Daniel</td>
+                    <td>Disquete</td>
+                    <td>Disco</td>
+                    <td>Discoteca</td>
+                </tr>
+                <tr>
+                    <td>Estevão</td>
+                    <td>Espingarda</td>
+                    <td>Espinafre</td>
+                    <td>Esfinge</td>
+                </tr>
+                <tr>
+                    <td>Felix</td>
+                    <td>Feijão</td>
+                    <td>Fotografia</td>
+                    <td>Fogo</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>
