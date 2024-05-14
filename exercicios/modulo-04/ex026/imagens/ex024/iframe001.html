@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Estudos de iframe</title>
 </head>
+<!--
+    -Por padrão, o tamanho do iframe é 300x150px
+    -No caso de iframe, a configuração em CSS é soberana às configurações inline
+    -Comando scrolling= 'no' (ou scolling) desabilita a barra de rolagem do iframe
+    -Frameborder aceita apenas 0 (sem borda) e 1 (com borda). Se quiser pode configurar border no CSS
+    -Entre <iframe> e </iframe> coloca-se o que deve aparecer no navegador caso ele não seja compativel com a exibição de iframe
+-->
 <body>
     <h1>Testando o uso de um iframe</h1>
     <p>
@@ -12,6 +19,9 @@
     </p>
     <p>
         O site parece <iframe src="https://www.cursoemvideo.com" frameborder="0"></iframe> assim.
+    </p>
+    <p>
+        O repositório do Guanabara <iframe src="https://gustavoguanabara.github.io" frameborder="0"></iframe> também é bem legal!
     </p>
 </body>
 </html>
