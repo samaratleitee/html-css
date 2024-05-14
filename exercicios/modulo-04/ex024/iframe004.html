@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iframes</title>
+</head>
+<body>
+    <h1>Meu site principal</h1>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta, perspiciatis placeat. Fugiat, recusandae quas! Veritatis nam velit, repudiandae accusantium eum facilis molestias quod, placeat ut nobis, atque esse? Ducimus, quo.</p>
+    <iframe src="paginas-extras/pag004.html" sandbox="sandbox" referrerpolicy="no-referrer"></iframe>
+    <!--
+        sandbox="sandbox" - o usuário não consegue enviar suas informações, o botão não fica clicável
+        sandbox="allow-same-origin" - permite enviar informações se o site do iframe for da mesma origem/servidor
+        sandbox="allow-forms" - permitir formulários
+        sandbox="allow-scripts" - permitir scripts
+        OBS: pode colocar mais uma configuração. Ex: sandbox="allow-same-origin allow-forms" (bas utilizar espaço entre os parâmetros)
+        referrerpolicy="no-referrer" - o conteudo que esta carregado dentro do iframe não vai coletar nenhum tipo de informação
+        OBS: referrerpolicy="no-referrer-when-downgrade" é o valor padrão
+    -->
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio esse, consequuntur iusto recusandae molestias fugiat suscipit obcaecati soluta necessitatibus repellendus similique aperiam nihil nesciunt labore itaque rerum tenetur tempore molestiae!</p>
+</body>
+</html>
