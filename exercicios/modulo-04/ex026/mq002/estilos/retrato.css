@@ -1,8 +1,7 @@
 @charset "UTF-8"
 
-/*Configurações no modo retrato (portrait - em pé)*/
+/*RETRATO*/
 
 body {
-    background-image: url('../imagens/cev-portrait.jpg');
-    background-position: center bottom;
+    background-color: pink;
 }
