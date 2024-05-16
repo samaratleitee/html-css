@@ -8,34 +8,48 @@
 <body>
     <h1>Cadastro de Notas</h1>
     <form action="cadastro.php" method="get" autocomplete="on">
-        <p>
-            <label for="ialuno">Aluno: </label>
-            <input type="text" name="aluno" id="ialuno" required placeholder="Nome completo" maxlength="30" size="15" autocomplete="name">
-        </p>
-        <p>
-            <label for="inota">Média: </label>
-            <input type="number" name="nota" id="inota" required min="0" max="10" step="0.1" value="5.0">
-        </p>
-        <p>
-            <label for="idia">Data da Prova: </label>
-            <input type="date" name="dia" id="idia" required>
-        </p>
-        <p>
-            <label for="imes">Período Letivo: </label>
-            <input type="month" name="mes" id="imes" required value="2024-05">
-        </p>
-        <p>
-            <label for="ihora">Horário: </label>
-            <input type="time" name="hora" id="ihora" required value="08:00">
-        </p>
-        <p>
-            <label for="idata">Data</label>
-            <input type="datetime-local" name="data" id="idata" required value="2024-05-15T08:00">
-        </p>
-        <p>
-            <input type="submit" value="Enviar">
-            <input type="reset" value="Limpar">
-        </p>
+        <fieldset> <!--Envelopa os dados em um campo-->
+            <legend>Dados do Aluno</legend> <!--Cria uma legenda para o fieldset-->
+            <p>
+                <label for="ialuno">Aluno: </label>
+                <input type="text" name="aluno" id="ialuno" required placeholder="Nome completo" maxlength="30" size="15" autocomplete="name">
+            </p>
+            <p>
+                <label for="inota">Média: </label>
+                <input type="number" name="nota" id="inota" required min="0" max="10" step="0.1" value="5.0">
+            </p>
+            <p>
+                <label for="idia">Data da Prova: </label>
+                <input type="date" name="dia" id="idia" required>
+            </p>
+            <p>
+                <label for="imes">Período Letivo: </label>
+                <input type="month" name="mes" id="imes" required value="2024-05">
+            </p>
+            <p>
+                <label for="ihora">Horário: </label>
+                <input type="time" name="hora" id="ihora" required value="08:00">
+            </p>
+            <p>
+                <label for="idata">Data</label>
+                <input type="datetime-local" name="data" id="idata" required value="2024-05-15T08:00">
+            </p>
+            <p>
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Limpar">
+            </p>
+        </fieldset>
     </form>
+<!--
+    Estudar sobre RegEx (expressões regulares)
+    colocar como parametro no input pattern="^$" -> o inicio da expressao deve ser ^ e o final deve ser $.
+    Exemplo de como aplicar:
+    <input type="tel" name="tel" id="itel" autocomplete="tel" pattern="^[0-9]{4}-[0-9]{4}$" required>
+    isso significa que o valor digitado pelo usuario deve estar entre [0-9], um total de {4} digitos, seguido por -  e digitos [0-9] com mais {4} digitos
+    no lugar de [0-9] pode-se utilizar \d
+    se eu quiser solicitar um celular, posso colocar {4,5} no lugar de quatro, isso indica que o campo vai ter de 4 a 5 digitos, - traço, 4 a 5 digitos, por exemplo
+    no caso de solicitar ddd, utiliza-se \(\d{2}\).. para abrir parenteses é \( e para fechar parenteses é \).
+    pesquisar: HTML5 telefone pattern
+-->
 </body>
 </html>
