@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Meu primeiro formulário</h1>
+    <form action="cadastro.php" method="post" autocomplete="off">
+        <p><label for="inome">Nome:</label><input type="text" name="inome" id="nome"></p>
+        <p><label for="isobrenome">Sobrenome:</label><input type="text" name="sobrenome" id="isobrenome"></p>
+        <p><input type="submit" value="Enviar"></p>
+    </form>
+    <!--No form, o parametro method por padrão é get, ou seja, se não colocar esse parâmetro é a mesma coisa que colocar method="get". A diferença entre get e post é que o get vai exibir os dados digitados pelo cliente na barra de endereço enquanto o post omite esses dados da barra de endereço, mas, ainda assim, é possivel obter esses dados ao inspecionar a página. Quando não utilizar dados sensiveis pode utilizar method="get", se o dado for sensivel, usar o method="post". Utiliza-se tambem o get quando se deseja que a url seja compartilhavel. Para usar o metodo get o formulario inteiro não pode ultrapassar 3000bytes, ou seja, 3000 letras e não pode conter arquivos-->
+</body>
+</html>
