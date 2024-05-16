@@ -4,10 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário</title>
+
+    <style>
+        * {
+            font-family: monospace;
+            margin: 0px;
+            padding: 5px;
+        }
+        h1 {
+            font-size: 1.5em;
+            text-align: center;
+            margin-top: 10px;
+            margin-block-start: 0px;
+            margin-block-end: 0px;
+        }
+        legend {
+            font-size: 0.7em;
+            text-align: center;
+        }
+        fieldset {
+            width: 500px;
+            margin: auto;
+            line-height: 1.5em;
+        }
+        .botoes {
+            display: flex;
+            justify-content: center;
+            margin-top: 1em;
+        }
+        .botoes input[type="submit"], .botoes input[type="reset"] {
+            margin: 10px;
+        }
+    </style>
 </head>
 <body>
     <h1>Pesquisa</h1>
-    <form action="cadastro.php" method="get" autocomplete="on">
+    <form action="cadastro.php" method="post" autocomplete="on">
         <fieldset>
             <legend>Dados Pessoais</legend>
             <label for="nome">Nome: </label>
@@ -20,7 +52,9 @@
             <label for="tel">Telefone: </label>
             <input type="tel" name="tel" id="tel" required pattern="^\(\d{2}\)\d{4,5}-\d{4}$" placeholder="(xx)xxxxx-xxxx"><br>
             <label for="mail">E-mail: </label>
-            <input type="email" name="mail" id="mail" required autocomplete="email" size="30">
+            <input type="email" name="mail" id="mail" required autocomplete="email" size="30"><br>
+            <label for="foto">Foto de perfil: </label>
+            <input type="file" name="foto" id="foto" required>
         </fieldset>
         <fieldset>
             <legend>Esportes favoritos</legend>
@@ -31,11 +65,22 @@
             <input type="checkbox" name="gin" id="gin"><label for="gin">Ginástica Artística</label><br>
             <input type="checkbox" name="cor" id="cor"><label for="cor">Corrida</label>
         </fieldset>
-        <input type="submit" value="Enviar">
-        <input type="reset" value="Limpar">
+        <fieldset>
+            <legend>Outras preferências</legend>
+            <label for="cor">Cor prefereida: </label>
+            <input type="color" name="cor" id="cor" value="#999999"><br>
+            <label for="sat">Nível de satisfação: </label>
+            <input type="range" name="sat" id="sat" min="1" max="5">
+        </fieldset>
+        <div class="botoes">
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </div>
     </form>
 <!--
     Botões de rádio que fazer parte do mesmo grupo devem ter o mesmo name, para que seja possivel apenas selecionar uma das opções, mas o id tem que ser diferente para o que label funcione!
+    Como vamos enviar um formulario com mais de 3KB, devemos utilizar method="post"
+    Por padrão, o input:range tem os valores de 0-100
 -->
 </body>
 </html>
