@@ -1,0 +1,67 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Sofia&family=Zeyada&display=swap');
+
+:root {
+    --fonteh1: "Zeyada", cursive;
+    --fonteh2: "Indie Flower", cursive;
+    --fontemenu: "Sofia", cursive;
+    --fontep: Arial, sans-serif;
+    --cor0: whitesmoke;
+    --cor1: lightsalmon;
+    --cor2: lightcoral;
+    --cor3: #f55555;
+    --cor4: #8b3535;   
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+html, body {
+    background-color: var(--cor1);
+}
+header {
+    background-color: var(--cor4);
+}
+h1 {
+    padding: 10px;
+    text-align: center;
+    font-family: var(--fonteh1);
+}
+menu {
+    display: block;
+}
+ul {
+    list-style-type: none;
+}
+li > a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    background-color: var(--cor3);
+    color: var(--cor0);
+    text-align: center;
+    border-top: 2px solid var(--cor4);
+    font-family: var(--fontemenu);
+}
+li > a:hover {
+    background-color: var(--cor2);
+}
+main {
+    width: 90vw;
+    background-color: var(--cor0);
+    margin: auto;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 10px;
+}
+article > h2 {
+    padding-bottom: 20px;
+    font-family: var(--fonteh2);
+}
+article > p {
+    text-align: justify;
+    margin-bottom: 20px;
+    text-indent: 20px;
+    font-family: var(--fontep);
+}
