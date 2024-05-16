@@ -35,6 +35,10 @@
         .botoes input[type="submit"], .botoes input[type="reset"] {
             margin: 10px;
         }
+        textarea#msg {
+            display: block;
+            margin: auto;
+        }
     </style>
 </head>
 <body>
@@ -53,6 +57,67 @@
             <input type="tel" name="tel" id="tel" required pattern="^\(\d{2}\)\d{4,5}-\d{4}$" placeholder="(xx)xxxxx-xxxx"><br>
             <label for="mail">E-mail: </label>
             <input type="email" name="mail" id="mail" required autocomplete="email" size="30"><br>
+            <label for="est">Estado: </label>
+            <select name="estado" id="est">
+                <option value="" selected>---Escolha---</option>
+                <optgroup label="Centro-Oeste">
+                    <option value="df">DF</option>
+                    <option value="go">GO</option>
+                    <option value="ms">MS</option>
+                    <option value="mt">MT</option>
+                </optgroup>
+                <optgroup label="Nordeste">
+                    <option value="">AL</option>
+                    <option value="">BA</option>
+                    <option value="">CE</option>
+                    <option value="">MA</option>
+                    <option value="">PB</option>
+                    <option value="">PE</option>
+                    <option value="">PI</option>
+                    <option value="">RN</option>
+                    <option value="">SE</option>
+                </optgroup>
+                <optgroup label="Norte">
+                    <option value="">AC</option>
+                    <option value="">AP</option>
+                    <option value="">AM</option>
+                    <option value="">PA</option>
+                    <option value="">RO</option>
+                    <option value="">RR</option>
+                    <option value="">TO</option>
+                </optgroup>
+                <optgroup label="Sudeste">
+                    <option value="es">ES</option>
+                    <option value="mg">MG</option>
+                    <option value="rj">RJ</option>
+                    <option value="sp">SP</option>
+                </optgroup>
+                <optgroup label="Sul">
+                    <option value="pr">PR</option>
+                    <option value="rs">RS</option>
+                    <option value="sc">SC</option>
+                </optgroup>                                
+            </select><br>
+            <label for="prof">Profissão: </label>
+            <input type="text" name="prof" id="prof" list="list-prof">
+            <datalist id="list-prof">
+                <option>Administrador</option>
+                <option>Agricultor</option>
+                <option>Atendente de lojas e mercados</option>
+                <option>Auxiliar de escritório</option>
+                <option>Cozinheiro</option>
+                <option>Empresário</option>
+                <option>Jornalista</option>
+                <option>Motorista de aplicativo</option>
+                <option>Motorista de caminhão</option>
+                <option>Pedagogo</option>
+                <option>Pedreiro</option>
+                <option>Professor</option>
+                <option>Profissional liberal</option>
+                <option>Químico</option>
+                <option>Recepcionista</option>
+                <option>Vendedor</option>
+            </datalist><br>
             <label for="foto">Foto de perfil: </label>
             <input type="file" name="foto" id="foto" required>
         </fieldset>
@@ -70,7 +135,9 @@
             <label for="cor">Cor prefereida: </label>
             <input type="color" name="cor" id="cor" value="#999999"><br>
             <label for="sat">Nível de satisfação: </label>
-            <input type="range" name="sat" id="sat" min="1" max="5">
+            <input type="range" name="sat" id="sat" min="1" max="5"><br>
+            <label for="msg">Nos conte mais sobre você: </label><br>
+            <textarea name="msg" id="msg" cols="50" rows="10"></textarea>
         </fieldset>
         <div class="botoes">
             <input type="submit" value="Enviar">
@@ -78,9 +145,10 @@
         </div>
     </form>
 <!--
-    Botões de rádio que fazer parte do mesmo grupo devem ter o mesmo name, para que seja possivel apenas selecionar uma das opções, mas o id tem que ser diferente para o que label funcione!
-    Como vamos enviar um formulario com mais de 3KB, devemos utilizar method="post"
-    Por padrão, o input:range tem os valores de 0-100
+    *Botões de rádio que fazer parte do mesmo grupo devem ter o mesmo name, para que seja possivel apenas selecionar uma das opções, mas o id tem que ser diferente para o que label funcione!
+    *Como vamos enviar um formulario com mais de 3KB, devemos utilizar method="post"
+    *Por padrão, o input:range tem os valores de 0-100
+    *Quando se utilizar textarea no formulário, utiliza-se o method="post" devido ao limite do método get
 -->
 </body>
 </html>
